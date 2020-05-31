@@ -61,7 +61,7 @@ Things you may want to cover:
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
-|body|text||
+|body|text|null: false|
 |image|string||
 
 ### Association of message
