@@ -66,5 +66,3 @@ Things you may want to cover:
 
 ### Association of message
 - belongs_to [:user, :group]
-
-* ...
