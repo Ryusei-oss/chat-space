@@ -27,9 +27,9 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, foreign_key: false|
-|email|string|null: false, foreign_key: false|
-|password|string|null: false, foreign_key: false|
+|name|string|null: false|
+|email|string|null: false|
+|password|string|null: false|
 
 ### Association of group
 - has_many [:groups_users, :messages]
