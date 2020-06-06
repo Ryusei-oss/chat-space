@@ -1,0 +1,39 @@
+.chat_main
+  .chat_main__group_info
+    .group_info__contents
+      .group_info__contents--name
+        Group-info
+      .group_info__contents--members
+        Member :masa
+    .group_info__edit
+      =link_to "#", class: "non_line" do
+        Edit
+
+  .chat_main__message_list
+    .message_list__contents
+      .message_list__contents--name
+        name 1
+      .message_list__contents--date
+        date 1
+      .message_list__contents--comment
+        comment 1
+    .message_list__contents
+      .message_list__contents--name
+        name 2
+      .message_list__contents--date
+        date 2
+      .message_list__contents--comment
+        comment 2
+  .chat_main__message_form
+    .message_form__contents
+      .message_form__contents--text
+        type a message
+      .message_form__contents--picture
+        %label{class: "input-box__image"}
+          = icon('fas', 'image')
+          %input{type: "file", class: "input"}
+    .message_form__send
+      =link_to "#", class: "non_line color_white" do
+        Send
+     
+    
