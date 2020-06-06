@@ -1,9 +1,9 @@
 .side_bar
   .side_bar__user_name
     .side_bar__user_name--font
-      User-name
+      =current_user.name
       .icom
-        =link_to "#", class: "edit color_white" do
+        =link_to edit_user_path(current_user), class: "edit color_white" do
           = icon('far fa-edit', 'icom')
         =link_to "#" do
           = icon('fa fa-cog', 'icom', class: "gear")
