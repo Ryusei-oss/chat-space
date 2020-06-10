@@ -3,19 +3,14 @@
     .side_bar__user_name--font
       =current_user.name
       .icom
-        =link_to edit_user_path(current_user), class: "edit color_white" do
+        =link_to new_group_path, class: "edit color_white" do
           = icon('far fa-edit', 'icom')
-        =link_to "#" do
+        =link_to edit_user_path(current_user) do
           = icon('fa fa-cog', 'icom', class: "gear")
-  .group_list
-    .group_list__group
-      .group_list__group--group_name
-        Group 1
-      .group_list__group--group_text
-        first group
-    .group_list__group
-      .group_list__group--group_name
-        Group 2
-      .group_list__group--group_text
-        second group
-
+  .group_list__group 
+    - current_user.groups.each do |group|
+        = link_to '#' do
+          .group_list__group--group_name
+            = group.name
+          .group_list__group--group_text
+            メッセージはまだありません。
