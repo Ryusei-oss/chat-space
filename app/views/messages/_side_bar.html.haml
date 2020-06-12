@@ -9,8 +9,8 @@
           = icon('fa fa-cog', 'icom', class: "gear")
   .group_list__group 
     - current_user.groups.each do |group|
-        = link_to '#' do
-          .group_list__group--group_name
-            = group.name
-          .group_list__group--group_text
-            メッセージはまだありません。
+      =link_to group_messages_path(group), class: "color_white" do
+        .group_list__group--group_name
+          = group.name
+        .group_list__group--group_text
+          メッセージはまだありません。
