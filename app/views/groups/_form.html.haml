@@ -1,5 +1,5 @@
 = form_for group do |f|
-   - if group.errors.any?
+  - if group.errors.any?
     .chat-group-form__errors
       %h2= "#{group.errors.full_messages.count}件のエラーが発生しました。"
       %ul
@@ -23,4 +23,3 @@
     .chat-group-form__field--left
     .chat-group-form__field--right
       = f.submit class: 'chat-group-form__action-btn'
-      

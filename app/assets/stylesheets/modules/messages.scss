@@ -49,7 +49,8 @@
         height: 90px;
         display: flex;
         justify-content: space-between;
-        align-items: center;      
+        align-items: center;   
+        position: relative;   
       }
 
   }
@@ -63,7 +64,6 @@
   color:#ffffff;
   font-weight: bold;
   &__group{
-    border: solid 1px blue;
     height: 91px;
     width: 260px;
     &--group_name{
@@ -133,7 +133,7 @@
       font-size: 12px;
       position: absolute;
       top: 35px;
-      margin-left: 5px;
+      margin-left: 105px;
     }
     &--comment{
       color: #434a54;
@@ -150,15 +150,17 @@
     width: calc( 100vw - 300px - 195px);
     margin-left: 40px;
     position: relative;
-    display: flex;
     align-items: center;
+    display: flex;
     &--text{
       color: #d2d2d2;
       margin-left: 10px;
+      line-height: 50px;
     }
     &--picture{
       position: absolute;
       right: 10px;
+      bottom: 15px;
       .input{
         display: none;
       }
@@ -171,7 +173,9 @@
     width: 100px;
     line-height: 50px;
     text-align: center;
-    margin: 0px 40px 0px 15px;
+    position: absolute;
+    right: 40px;
+    bottom: 20px;
   }
 }
 
