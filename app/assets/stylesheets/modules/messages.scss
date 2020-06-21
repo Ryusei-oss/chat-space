@@ -42,6 +42,7 @@
       &__message_list{
         background-color: #fafafa;
         height: calc( 100vh - 190px );
+        overflow: scroll;
       }
 
       &__message_form{
@@ -93,6 +94,7 @@
 
 .group_info
 {
+  height: 100px;
   &__contents{
     &--name{
       color: #333333;
@@ -119,6 +121,7 @@
 }  
 
 .message_list{
+  height: calc( 100vh - 150px );
   &__contents{
     padding: 35px 0px 11px 40px;
     position: relative;
@@ -133,7 +136,7 @@
       font-size: 12px;
       position: absolute;
       top: 35px;
-      margin-left: 105px;
+      margin-left: 55px;
     }
     &--comment{
       color: #434a54;
@@ -189,5 +192,9 @@
 
 .color_white{
   color: #ffffff;
+}
+
+.test{
+  background-color: red;
 }
 
