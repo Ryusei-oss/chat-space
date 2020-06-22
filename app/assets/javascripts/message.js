@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 $(function(){ 
   function buildHTML(message){
    if ( message.image ) {
@@ -54,3 +55,11 @@ $(function(){
     });
   })
 });
+=======
+$(function(){
+  $('#new_message').on('submit', function(e){
+    console.log('hoge');
+    e.preventDefault()
+  });
+});
+>>>>>>> Stashed changes
