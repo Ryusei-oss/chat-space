@@ -19,3 +19,4 @@
 public/uploads/*
 
 /vendor/*
+config/secrets.yml

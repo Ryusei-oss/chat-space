@@ -3,8 +3,8 @@ $(function(){
    if ( message.image ) {
      var html =
       `<div class = "message" data-message-id = ${message.id}>
-        <div class=".message_list">
-          <div class=".message_list__contents--name">
+        <div class="message_list__contents">
+          <div class="message_list__contents--name">
             ${message.user_name}
           </div>
           <div class="message_list__contents--date">
