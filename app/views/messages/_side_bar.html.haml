@@ -7,10 +7,11 @@
           = icon('far fa-edit', 'icom')
         =link_to edit_user_path(current_user) do
           = icon('fa fa-cog', 'icom', class: "gear")
-  .group_list__group 
-    - current_user.groups.each do |group|
-      =link_to group_messages_path(group), class: "color_white" do
-        .group_list__group--group_name
-          = group.name
-        .group_list__group--group_text
-          メッセージはまだありません。
+  .side_bar__group_list
+    .group_list__group 
+      - current_user.groups.each do |group|
+        =link_to group_messages_path(group), class: "color_white non-decoration" do
+          .group_list__group--group_name
+            = group.name
+          .group_list__group--group_text
+            = group.show_last_message

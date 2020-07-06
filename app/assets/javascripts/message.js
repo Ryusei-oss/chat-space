@@ -1,4 +1,5 @@
 $(function(){ 
+
   function buildHTML(message){
    if ( message.image ) {
      var html =
@@ -35,10 +36,11 @@ $(function(){
      return html;
    };
  }
+
   $('#new_message').on('submit', function(e){
-    e.preventDefault();
+    e.preventDefault()
     var formData = new FormData(this);
-    var url = $(this).attr('action')
+    var url = $(this).attr('action');
     $.ajax({
       url: url,
       type: "POST",
@@ -53,9 +55,13 @@ $(function(){
       $('.chat_main__message_list').animate({ scrollTop: $('.chat_main__message_list')[0].scrollHeight});
       $('form')[0].reset();      
     })
+    .fail(function(data){
+      alert("空送信または連打していませんか？")
+    })
     .always(() => {
       $('input').removeAttr("disabled");
     });
+    
   })
 
   var reloadMessages = function() {
@@ -91,3 +97,5 @@ $(function(){
     setInterval(reloadMessages, 7000);
   }
 });
+
+
